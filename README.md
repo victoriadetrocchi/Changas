@@ -1,50 +1,48 @@
-# App de Servicios - Conectora del Hogar
+# Home Services Connector App
 
-Aplicación móvil (MVP) de doble vía que conecta de manera directa a usuarios con necesidades de servicios en el hogar con prestadores independientes locales, basando la confianza en un sistema comunitario de reseñas[cite: 2].
+Two-way mobile application (MVP) that directly connects users needing home services with local independent providers, basing trust on a community-driven review system[cite: 2].
 
-## 🚀 Características Principales
+## Key Features
 
-*   **Tablón de anuncios geolocalizado:** Publicación de problemas y necesidades detectando la ubicación del usuario[cite: 2].
-*   **Directorio de prestadores:** Búsqueda filtrable por rubro y radio de cercanía en kilómetros[cite: 2].
-*   **Mensajería interna (Chat):** Comunicación en tiempo real para negociaciones seguras sin exponer datos de contacto inicialmente[cite: 2].
-*   **Motor de reputación:** Sistema de calificaciones (1 a 5 estrellas) y reseñas obligatorias post-servicio[cite: 2].
-*   **Validación de identidad:** Mitigación de riesgos mediante validación básica con DNI[cite: 2].
+*   **Geolocated job board:** Publishing of problems and needs by detecting the user's location[cite: 2].
+*   **Provider directory:** Filterable search by trade category and proximity radius in kilometers[cite: 2].
+*   **Internal messaging (Chat):** Real-time communication for secure negotiations without initially exposing contact details[cite: 2].
+*   **Reputation engine:** Rating system (1 to 5 stars) and mandatory post-service reviews[cite: 2].
+*   **Identity validation:** Risk mitigation through basic ID validation[cite: 2].
 
-## 🛠️ Stack Tecnológico
+## Tech Stack
 
 *   **Frontend:** React Native[cite: 2].
-*   **Backend:** Node.js con Express[cite: 2].
-*   **Base de Datos:** MySQL (implementando *Spatial Data Types* para cálculos de geolocalización nativos)[cite: 2].
-*   **Comunicación en Tiempo Real:** WebSockets[cite: 2].
+*   **Backend:** Node.js with Express[cite: 2].
+*   **Database:** MySQL (implementing *Spatial Data Types* for native geolocation calculations)[cite: 2].
+*   **Real-Time Communication:** WebSockets[cite: 2].
 
-## 🏗️ Arquitectura y Modelo de Datos
+## Architecture and Data Model
 
-El proyecto utiliza una arquitectura Cliente-Servidor[cite: 2]:
-*   **Client-Side:** Aplicación nativa que maneja la UI, interacciones, geolocalización y consumo de API[cite: 2].
-*   **Server-Side:** Exposición de endpoints REST para operaciones CRUD, autenticación mediante JWT y WebSockets para las salas de chat[cite: 2].
-*   **Database:** Modelo relacional que vincula usuarios, servicios, publicaciones, postulaciones, salas de chat y reseñas[cite: 2].
+The project utilizes a Client-Server architecture[cite: 2]:
+*   **Client-Side:** Native application handling UI, interactions, geolocation, and API consumption[cite: 2].
+*   **Server-Side:** REST endpoints for CRUD operations, JWT authentication, and WebSockets for chat rooms[cite: 2].
+*   **Database:** Relational model linking users, services, publications, applications, chat rooms, and reviews[cite: 2].
 
-## ⚙️ Instalación y Ejecución
+## Installation and Setup
 
-1. Clonar el repositorio:
-   git clone [https://github.com/victoriadetrocchi/Changas.git](https://github.com/victoriadetrocchi/Changas.git)
-   
-3. Instalar dependencias del servidor:
-   
+1. Clone the repository:
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
+Install server dependencies:
+
    cd backend
    npm install
-   
-4. Instalar dependencias de la aplicación móvil:
-   
+Install mobile app dependencies:
+
    cd frontend
    npm install
-   
-5. Configurar las variables de entorno (.env) con las credenciales de MySQL y secretos de JWT.
+Configure environment variables (.env) with MySQL credentials and JWT secrets.
 
-6. Iniciar el servidor de desarrollo:
+Start the development server:
 
+Bash
    npm run dev
+Run the application on an emulator or physical device:
 
-7. Iniciar la aplicación en el emulador o dispositivo físico:
-
-   npx react-native run-android # o run-ios
+Bash
+   npx react-native run-android # or run-ios
